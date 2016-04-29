@@ -1,0 +1,18 @@
+$ sudo su
+$ tar -zxvf eclipse-java-mars-2-linux-gtk-x86_64.tar.gz -C /opt
+$ cd /usr/share/applications
+$ gedit eclipse.desktop
+$ cat eclipse.desktop
+[Desktop Entry]
+Name=Eclipse
+Name[en]=Eclipse
+Comment=Integrated Development Environment
+Type=Application
+Exec=/opt/eclipse/eclipse
+Icon=/opt/eclipse/icon.xpm
+Terminal=false
+NoDisplay=false
+Categories=Development;IDE;
+$ desktop-file-install /usr/share/applications/eclipse.desktop
+$ cd /usr/local/bin
+$ ln -s /opt/eclipse/eclipse
